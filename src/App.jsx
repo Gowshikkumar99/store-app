@@ -45,7 +45,8 @@ export default function App() {
           <Route path="/products" element={<Dashboard />} />
           <Route path="/edit/:id" element={<ProductPage />} />
           <Route path="/add" element={<ProductPage />} />
-          {/* <Route path="*" element={<Navigate to="/products" replace />} /> */}
+          <Route path="/" element={<Navigate to="/products" replace />} />
+          <Route path="*" element={<Navigate to="/products" replace />} />
         </Routes>
       </main>
       <Footer />
