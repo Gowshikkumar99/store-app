@@ -1,0 +1,44 @@
+.product-table {
+  th,
+  td {
+    vertical-align: middle;
+    text-align: left;
+    color: $slate;
+    padding: 0.5rem 1rem;
+  }
+
+  td {
+    cursor: pointer;
+  }
+
+  &.table-hover {
+    tbody {
+      tr {
+        &:hover {
+          td {
+            background: $hover-gray-bg;
+          }
+        }
+      }
+    }
+  }
+
+  &__image {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 1rem;
+    background-color: $dropdown-bg;
+    padding: 0.5rem;
+    object-fit: contain;
+  }
+
+  &__head {
+    background-color: $light-gray-bg;
+  }
+
+  &__item {
+    &-title {
+      text-align: left;
+    }
+  }
+}

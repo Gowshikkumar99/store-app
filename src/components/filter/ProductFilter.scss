@@ -1,0 +1,62 @@
+.product-filter {
+  position: relative;
+  cursor: pointer;
+  font-family: inherit;
+  width: 15rem;
+
+  @include mq(sm, max) {
+    width: 100%;
+  }
+
+  &__input {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid $black;
+    border-radius: 5px;
+    padding: 0.2rem 0.6rem;
+    background-color: $white;
+    color: $black;
+    transition: background-color 0.3s ease;
+  }
+
+  &__list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: $white;
+    border: 1px solid $black;
+    border-top: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    z-index: 99;
+    max-height: 12rem;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: $gray-light transparent;
+
+    &::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: $gray-light;
+      border-radius: 4px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background-color: transparent;
+    }
+  }
+
+  &__item {
+    padding: 0.5rem 0.75rem;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: $gray-light;
+    }
+  }
+}

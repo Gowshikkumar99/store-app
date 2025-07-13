@@ -1,0 +1,27 @@
+@mixin mq($size, $type: min) {
+  $breakpoints: (
+    "sm": 576px,
+    "md": 768px,
+    "lg": 992px,
+    "xl": 1200px,
+    "xxl": 1400px,
+  );
+
+  $breakpoint: map-get($breakpoints, $size);
+
+  @if $breakpoint {
+    @if $type == min {
+      @media (min-width: $breakpoint) {
+        @content;
+      }
+    } @else if $type == max {
+      @media (max-width: calc(#{$breakpoint} - 0.02px)) {
+        @content;
+      }
+    } @else {
+      @warn "Invalid type: `#{$type}`. Use `min` or `max`.";
+    }
+  } @else {
+    @warn "Unknown breakpoint: `#{$size}`.";
+  }
+}
