@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-   "homepage": "https://Gowshikkumar99.github.io/store-app",
+   "homepage": "https://Gowshikkumar99.github.io/products",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
